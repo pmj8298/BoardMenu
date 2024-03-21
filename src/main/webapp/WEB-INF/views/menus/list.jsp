@@ -39,7 +39,7 @@ text-align: right;}
 </head>
 <body>
   <main>
-    <h2>메뉴 목록(수정2)</h2>
+    <h2>메뉴 목록</h2>
     <table>
       <tr>
         <td>Menu_id</td>
@@ -55,13 +55,13 @@ text-align: right;}
         </td>
       </tr>
       
-      <c:forEach var="menu" items="${menuList}">
+      <c:forEach var="menu" items="${ menuList }">
       <tr>
         <td>${menu.menu_id}</td>
         <td>${menu.menu_name}</td>
         <td>${menu.menu_seq}</td>
-        <td><a href="">삭제</a></td>
-        <td><a href="">수정</a></td>
+        <td><a href="/Menus/Delete?menu_id=${menu.menu_id}">삭제</a></td>
+        <td><a href="#">수정</a></td>
       </tr>
       </c:forEach>
       

@@ -15,9 +15,11 @@ input[type=submit]{width:100px;}
  td{padding: 10px; 
  width: 700px;
  text-align: center;}
+ 
  td:nth-of-type(1) {
 	width: 200px;
 }
+
 td:not([colspan]):first-child {
 	background: black;
 	color: white;
