@@ -62,7 +62,7 @@ text-align: right;}
         <td>${menu.menu_name}</td>
         <td>${menu.menu_seq}</td>
         <td><a href="/Menus/Delete?menu_id=${menu.menu_id}">삭제</a></td>
-        <td><a href="#">수정</a></td>
+        <td><a href="/Menus/UpdateForm?menu_id=${menu.menu_id}">수정</a></td>
       </tr>
       </c:forEach>
       
