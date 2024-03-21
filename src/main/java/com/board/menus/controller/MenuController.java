@@ -31,6 +31,8 @@ public class MenuController {
 		
 		return "menus/list";
 	}
+	
+	//------------------------------------------------------------------------
 
 	// 메뉴 입력받는 화면
 	// /Menus/WriteForm
@@ -40,6 +42,7 @@ public class MenuController {
 		return "menus/write"; // /WEB-INF/views/ + menus/write + .jsp
 	}
 	
+	//----------------------------------------------------------------------------
 	// 메뉴 저장
 	// /Menus/Write
 	// /Menus/Write?menu_id=MENU_02&menu_name=JSP&menu_seq=2
@@ -59,6 +62,25 @@ public class MenuController {
 		
 		//return "menus/list"; // menus/list.jsp
 	}
+	
+	//--------------------------------------------------------------------------
+	///Menus/WriteForm2
+	@RequestMapping("/WriteForm2")
+		public String writeForm2() {
+		return "menus/write2";
+	}
+	
+	@RequestMapping("/Write2")
+	public String write2(MenuVo menuVo) {
+		// 저장
+		menuMapper.insertMenuByName(menuVo);
+		
+		// 조회로 이동
+		return "redirect:/Menus/List";
+	}
+	
+	
+	//---------------------------------------------------------------------------
 	
 	// 메뉴삭제 /Menus/Delete
 	@RequestMapping("/Delete")

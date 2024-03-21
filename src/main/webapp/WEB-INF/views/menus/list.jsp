@@ -51,7 +51,8 @@ text-align: right;}
       
       <tr>
         <td colspan="5">
-        [<a href="/Menus/WriteForm">메뉴등록</a>]
+        [<a href="/Menus/WriteForm">메뉴등록</a>]&nbsp;&nbsp;&nbsp;
+        [<a href="/Menus/WriteForm2">메뉴등록2</a>]
         </td>
       </tr>
       
