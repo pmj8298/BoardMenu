@@ -116,23 +116,30 @@ public class MenuController {
 	// 메뉴수정
 	//UpdateForm?menu_id=${menu.menu_id}
 	@RequestMapping("/UpdateForm")
-	public String updateForm(MenuVo menuVo) {
+	public String updateForm(MenuVo menuVo, Model model) {
+		System.out.println("menuVo:" + menuVo);
+		String menu_id = menuVo.getMenu_id();
 		
 		// 수정할 데이터를 menu_id 조회
-		
+		MenuVo menu = menuMapper.getMenu(menu_id);
 		// 조회한 내용을 모델에 담는다
+		model.addAttribute("menu",menu);
 		
 		return "menus/update";
 	}
 	
 	// /Menus/Update
+	// http://localhost:9090/Menus/Update?menu_id=MENU01&menu_name=GIT&menu_seq=1
 	@RequestMapping("/Update")
 	public String update(MenuVo menuVo) {
 		
 		// 수정
+		menuMapper.updateMenu(menuVo);
+		
 		
 		// 수정 후 조회
 		return "redirect:/Menus/List"; 
+		//return "";
 	}
 	
 }

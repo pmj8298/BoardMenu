@@ -56,13 +56,13 @@ text-align: right;}
         </td>
       </tr>
       
-      <c:forEach var="menu" items="${ menuList }">
+      <c:forEach var="menuVo" items="${ menuList }">
       <tr>
-        <td>${menu.menu_id}</td>
-        <td>${menu.menu_name}</td>
-        <td>${menu.menu_seq}</td>
-        <td><a href="/Menus/Delete?menu_id=${menu.menu_id}">삭제</a></td>
-        <td><a href="/Menus/UpdateForm?menu_id=${menu.menu_id}">수정</a></td>
+        <td>${menuVo.menu_id}</td>
+        <td>${menuVo.menu_name}</td>
+        <td>${menuVo.menu_seq}</td>
+        <td><a href="/Menus/Delete?menu_id=${menuVo.menu_id}">삭제</a></td>
+        <td><a href="/Menus/UpdateForm?menu_id=${menuVo.menu_id}">수정</a></td>
       </tr>
       </c:forEach>
       
